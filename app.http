@@ -1,0 +1,32 @@
+POST http://localhost:4500/project
+Content-Type: application/json
+
+{
+    "project_name":" Build adium", 
+    "description":"  holding 2000 people", 
+    "project_location":"20gghjm", 
+    "startdate":"24/7/2023", 
+    "enddate":"24/7/2023"
+}
+
+
+###
+GET http://localhost:4500/project
+
+###
+GET  http://localhost:4500/project/
+
+###
+PUT  http://localhost:4500/project/
+Content-Type: application/json
+
+{
+    "project_name":" Buildig  stadium", 
+    "description":"  holding 7000 people", 
+    "project_location":"2000", 
+    "startdate":"26/7/2023", 
+    "enddate":"26/7/2023"
+}
+
+###
+DELETE  http://localhost:4500/project/2ac9c11b-1089-476d-8204-9d661c6a1fe3
