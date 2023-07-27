@@ -1,4 +1,5 @@
 const { v4 } = require("uuid");
+const { CreateProjectsTable } = require("../Database/Tables/projectsTable");
 
 const projects = [];
 
@@ -21,7 +22,10 @@ class Project {
 }
 
 const createProject = async (req, res) => {
+  // createProject();
   try {
+    // createProject();
+    // return;
     const id = v4();
     const { project_name, description, project_location, startdate, enddate } =
       req.body;
@@ -35,7 +39,8 @@ const createProject = async (req, res) => {
     };
 
     projects.push(newProject);
-
+    CreateProjectsTable();
+    
     // console.log(projects);
     res.json({
       message: "project completed successfullyy",
